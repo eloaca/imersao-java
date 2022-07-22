@@ -9,7 +9,7 @@ import java.io.InputStream;
 
 public class GeradoraDeFigurinhas {
 
-    public boolean gerador(final InputStream stream, final String texto, final String nomeArquivo) throws IOException {
+    public void gerador(final InputStream stream, final String texto, final String nomeArquivo) throws IOException {
 
         final var pahtName = "image/imagem.jpg";
 
@@ -33,6 +33,6 @@ public class GeradoraDeFigurinhas {
 
         var caminhoNovoArquivo = "image/".concat(nomeArquivo);
 
-        return ImageIO.write(novaImagem, "png", new File(caminhoNovoArquivo));
+        ImageIO.write(novaImagem, "png", new File(caminhoNovoArquivo));
     }
 }
